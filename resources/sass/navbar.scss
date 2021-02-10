@@ -1,0 +1,190 @@
+.wrapper {
+    width: 80%;
+    margin: auto;
+    overflow:hidden;
+}
+
+.mover-nav {
+    float: left; /* Desplazamos el nav hacia la izquierda */
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden; /* Limpiamos errores de float */
+}
+
+nav ul li {
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+  
+nav ul li a {
+    display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+  
+nav ul li:hover {
+    background: #b16e09;
+}
+
+.type-text{
+    font-family: $font-family-navbar;
+}
+
+.navbar-sombreado{
+    box-shadow: 2px 2px 5px rgb(153, 153, 153);
+}
+
+
+.color-fondo{
+    --tw-bg-opacity: 1;
+    background-color: rgb(22, 19, 19, var(--tw-bg-opacity));
+}
+
+
+#hero-categorias {
+    
+    background-image: url('/template.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 100%;
+    height:400px;
+}
+
+@media screen and (max-width:1920px){
+    #hero-categorias {
+    
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height:500px;
+      
+
+    }
+}
+
+
+@media screen and (max-width: 758px){
+    #hero-categorias { 
+        background-repeat: no-repeat;
+        width: 100%;
+        height:300px;
+        
+
+    }
+}
+@media screen and (max-width: 520px){
+    #hero-categorias { 
+        background-repeat: no-repeat;
+        width: 100%;
+        height:150px;
+        
+
+    }
+}
+
+
+  
+
+.fondo-login {
+    
+    background-image: url('/curriculum-concepto-búsqueda-de-empleo.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top center;
+    
+}
+
+@media screen and (max-width: 758px){
+    .fondo-login { 
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+
+    }
+}
+@media screen and (max-width: 520px){
+    .fondo-login { 
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+
+    }
+}
+
+.fondo-register {
+    
+    background-image: url('/informacion-innecesaria-curriculum.jpg');
+    
+    background-size: auto;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 100%;
+    height:60rem;
+}
+
+
+@media screen and (max-width: 1000px){
+    .fondo-register { 
+        background-repeat: no-repeat;
+        width: 100%;
+        height:53rem;
+        
+
+    }
+}
+
+@media screen and (max-width: 758px){
+    .fondo-register { 
+        background-repeat: no-repeat;
+        width: 100%;
+        height:55rem;
+        background-size: contain;
+
+    }
+}
+@media screen and (max-width: 520px){
+    .fondo-register { 
+        background-repeat: no-repeat;
+        width: 100%;
+        height:55rem;
+        background-size: contain;
+        background-position: top center;
+
+    }
+}
+
+@media screen and (max-width: 360px){
+    .fondo-register { 
+        background-repeat: no-repeat;
+        width: 100%;
+        height:59rem;
+        background-size: contain;
+        background-position: top center;
+    }
+}
+
+
+@media screen and (min-height: 360px){
+    .fondo-register { 
+        background-repeat: no-repeat;
+        width: 100%;
+        height:65rem;
+        background-position: top center;
+
+    }
+}
+
+@media screen and (min-height: 960px){
+    .fondo-register { 
+        background-repeat: no-repeat;
+        width: 100%;
+        height:100%;
+        background-position: top center;
+
+    }
+}
