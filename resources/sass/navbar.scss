@@ -42,6 +42,7 @@ nav ul li:hover {
 .color-fondo{
     --tw-bg-opacity: 1;
     background-color: rgb(22, 19, 19, var(--tw-bg-opacity));
+    
 }
 
 
@@ -96,6 +97,7 @@ nav ul li:hover {
     background-repeat: no-repeat;
     background-size: auto;
     background-position: top center;
+    height: 44rem;
     
 }
 
@@ -116,6 +118,22 @@ nav ul li:hover {
     }
 }
 
+
+@media screen and (max-height: 500px){
+    .fondo-login { 
+        background-image: url('/unnamed.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center 150;
+        height: 160%;
+
+    }
+}
+
+
+
+
+
 .fondo-register {
     
     background-image: url('/informacion-innecesaria-curriculum.jpg');
@@ -124,7 +142,7 @@ nav ul li:hover {
     background-repeat: no-repeat;
     margin: 0 auto;
     width: 100%;
-    height:60rem;
+    height:55rem;
 }
 
 
@@ -132,7 +150,7 @@ nav ul li:hover {
     .fondo-register { 
         background-repeat: no-repeat;
         width: 100%;
-        height:53rem;
+        height:55rem;
         
 
     }
@@ -151,7 +169,7 @@ nav ul li:hover {
     .fondo-register { 
         background-repeat: no-repeat;
         width: 100%;
-        height:55rem;
+        height:60rem;
         background-size: contain;
         background-position: top center;
 
@@ -162,7 +180,7 @@ nav ul li:hover {
     .fondo-register { 
         background-repeat: no-repeat;
         width: 100%;
-        height:59rem;
+        height:55rem;
         background-size: contain;
         background-position: top center;
     }
@@ -173,7 +191,7 @@ nav ul li:hover {
     .fondo-register { 
         background-repeat: no-repeat;
         width: 100%;
-        height:65rem;
+        height:55rem;
         background-position: top center;
 
     }

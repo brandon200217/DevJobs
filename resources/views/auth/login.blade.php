@@ -1,29 +1,31 @@
-<div class="fondo-login font-sans login bg-cover">
+@extends('layouts.app')
 
-    @extends('layouts.app')
 
-    @section('content')
+@section('content')
+    <div class="fondo-login font-sans login bg-cover min-h-pantalla">
 
-    <div class="container mx-auto h-full justify-center items-center">
-        <div class="flex flex-wrap justify-center ">
-            <div class=" w-full max-w-lg">
-                <div class="flex flex-col break-words bg-gray-400 bg-opacity-80 border-2 shadow-md mt-20">
-                    <div class="bg-gray-800 text-gray-100 uppercase text-center py-3  mb-0">
-                        {{ __('login')}}
-                    </div>
-                    <div class="my-3 mx-4">{{ __('Login') }}</div>
+        <div class="container mx-auto h-full justify-center items-center">
+            <div class="flex flex-wrap justify-center ">
+                <div class=" w-full max-w-lg">
+                    <div class="flex flex-col break-words bg-gray-400 bg-opacity-80 border-2 shadow-md mt-20">
+                        <div class="bg-gray-800 text-gray-100 uppercase text-center py-3  mb-0">
+                            {{ __('login')}}
+                        </div>
+                        
+                        <div class="my-3 mx-4">{{ __('Login') }}</div>
 
-                        <form class="py-8 px-5" method="POST" action="{{ route('login') }}">
+                 
+                        <form class="py-8 px-5" method="POST" action="{{ route('login') }}" novalidate>
                             @csrf
 
                             <div class="flex flex-wrap mb-6">
                                 <label for="email" class="block text-gray-900 text-sm mb-2">{{ __('E-Mail Address') }}</label>
 
-                              
-                                <input id="email" type="email" class="p-3 bg-gray-200 rounded form-input w-full @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            
+                                <input id="email" type="email" class="p-3 bg-gray-200 rounded form-input w-full @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" autofocus>
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full mt-5 text-sm" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -34,14 +36,14 @@
                                 <label for="password" class="block text-gray-900 text-sm mb-2">{{ __('Password') }}</label>
 
                                 
-                                <input id="password" type="password" class="p-3 bg-gray-200 rounded form-input w-full @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" class="p-3 bg-gray-200 rounded form-input w-full @error('password') is-invalid @enderror" name="password" autocomplete="current-password">
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 w-full mt-5 text-sm" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                               
+                            
                             </div>
 
                             <div class="flex flex-wrap mb-6">
@@ -55,24 +57,23 @@
                             </div>
 
                             <div class="flex flex-wrap">
-                               
+                            
                                 <button type="submit" class="bg-gray-800 p-2 w-full text-white rounded-md hover:bg-gray-900 focus:outline-none focus:shadow-outline uppercase">
                                     {{ __('Login') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link text-black" href="{{ route('password.request') }}">
+                                    <a class="test-sm text-black mt-5 text-center w-full hover:underline" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
-                              
+                            
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </div> 
-</div> 
 
 @endsection
